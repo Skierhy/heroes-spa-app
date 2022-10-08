@@ -1,6 +1,15 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 
-export const NavBar = () => {
+export const NavBar = (props) => {
+	// es un custom hook que nos permite navegar entre rutas
+	const navigate = useNavigate();
+	const onLogout = () => {
+		// ruta que queremos navegar
+		// el segundo argumento es un objeto con opciones
+		// replace: true -> reemplaza la ruta actual por la nueva
+		// evita que el usuario pueda volver a la ruta anterior
+		navigate('/login', { replace: true });
+	};
 	return (
 		<nav className='navbar navbar-expand-lg bg-light'>
 			<div className='container-fluid'>
@@ -43,10 +52,23 @@ export const NavBar = () => {
 						>
 							DC
 						</NavLink>
+						<NavLink
+							className={({ isActive }) =>
+								`nav-link nav-item ${
+									isActive ? 'active' : undefined
+								}`
+							}
+							to='/search'
+						>
+							Search
+						</NavLink>
 						<span className='nav-item nav-link text-info'>
 							Skierhy
 						</span>
-						<button className='nav-item nav-link btn'>
+						<button
+							className='nav-item nav-link btn'
+							onClick={onLogout}
+						>
 							Logout
 						</button>
 					</div>
