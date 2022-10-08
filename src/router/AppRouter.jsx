@@ -1,17 +1,16 @@
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { LoginPage } from '../auth';
-import { MarvelPage, DcPage } from '../heroes';
-import { NavBar } from '../util';
+import { HeroesRoutes } from '../heroes';
 
 export const AppRouter = () => {
 	return (
 		<>
-			<NavBar />
 			<Routes>
-				<Route path='marvel' element={<MarvelPage />} />
-				<Route path='dc' element={<DcPage />} />
 				<Route path='login' element={<LoginPage />} />
-				<Route path='/' element={<Navigate to={'/marvel'} />} />
+				{/*
+				/* es cualquier otra ruta que no sea login
+				*/}
+				<Route path='/*' element={<HeroesRoutes />} />
 			</Routes>
 		</>
 	);
