@@ -24,7 +24,7 @@ export const HeroCard = ({
 	// const charactersByHero = <p className='card-text'>{characters}</p>;
 	return (
 		<>
-			<div className='col-sm-12'>
+			<div className='col-sm-12 mb-3'>
 				<div className='card'>
 					<div className='row no-gutters'>
 						<div className='col-4'>

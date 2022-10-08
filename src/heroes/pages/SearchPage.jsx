@@ -31,7 +31,7 @@ export const SearchPage = () => {
 			<h1>Search</h1>
 			<hr />
 			<div className='row'>
-				<div className='col-5'>
+				<div className='col-xl-5 col-sm-12'>
 					<h4 style={styles}>Searching</h4>
 					<hr />
 					<form onSubmit={onSearchSubmit}>
@@ -52,8 +52,10 @@ export const SearchPage = () => {
 						</button>
 					</form>
 				</div>
-				<div className='col-7'>
-					<h4>Results</h4>
+				<div className='col-xl-7 col-sm-12'>
+					<h4 style={styles} className='mt-2'>
+						Results
+					</h4>
 					<hr />
 					{q === '' ? (
 						<div className='alert alert-info'>Search a hero</div>

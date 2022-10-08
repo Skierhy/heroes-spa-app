@@ -7,12 +7,14 @@ export const LoginPage = () => {
 	};
 	return (
 		<>
-			<div className='container'>
-				<h1>Login</h1>
-				<hr />
-				<button className='btn btn-primary' onClick={onLogin}>
-					Login
-				</button>
+			<div className='d-flex flex-row justify-content-center alig-items-center'>
+				<div>
+					<h1>Login</h1>
+					<hr />
+					<button className='btn btn-primary' onClick={onLogin}>
+						Login
+					</button>
+				</div>
 			</div>
 		</>
 	);
