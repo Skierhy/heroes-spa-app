@@ -8,7 +8,8 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"format": "prettier --write .",
-		"lint": "eslint --fix . --ext .js,.ts,.jsx,.tsx"
+		"lint": "eslint --fix . --ext .js,.ts,.jsx,.tsx",
+		"img": "gulp --task"
 	},
 	"dependencies": {
 		"@popperjs/core": "^2.11.6",
@@ -34,6 +35,8 @@
 		"eslint-plugin-n": "^15.0.0",
 		"eslint-plugin-promise": "^6.0.0",
 		"eslint-plugin-react": "^7.31.8",
+		"gulp": "^4.0.2",
+		"gulp-imagemin": "^8.0.0",
 		"prettier": "^2.7.1",
 		"vite": "^3.1.0"
 	}
