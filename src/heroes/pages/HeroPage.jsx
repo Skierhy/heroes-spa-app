@@ -24,12 +24,12 @@ export const HeroPage = () => {
 	if (!hero) return <Navigate to='/' />;
 	return (
 		<>
-			<div className='row mt-5 animate__animated animate__flipInX'>
+			<div className='row mt-5'>
 				<div className='col-xl-4 col-sm-12'>
 					<img
-						src={`/assets/heroes/${id}.jpg`}
+						src={`/images/heroes/${id}.jpg`}
 						alt={hero.superhero}
-						className='img-thumbnail'
+						className='img-thumbnail animate__animated animate__fadeInLeft'
 					/>
 				</div>
 				<div className='col-xl-8 col-sm-12 mt-3'>

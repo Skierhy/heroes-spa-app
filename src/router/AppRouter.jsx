@@ -6,7 +6,7 @@ export const AppRouter = () => {
 	return (
 		<>
 			<Routes>
-				<Route path='login' element={<LoginPage />} />
+				<Route path='/login' element={<LoginPage />} />
 				{/*
 				/* es cualquier otra ruta que no sea login
 				*/}

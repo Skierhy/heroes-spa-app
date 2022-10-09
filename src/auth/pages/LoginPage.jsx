@@ -7,7 +7,7 @@ export const LoginPage = () => {
 	};
 	return (
 		<>
-			<div className='d-flex flex-row justify-content-center alig-items-center'>
+			<div className=''>
 				<div>
 					<h1>Login</h1>
 					<hr />
