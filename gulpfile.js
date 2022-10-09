@@ -5,4 +5,4 @@ export default () =>
 	gulp
 		.src('./images/heroes/*')
 		.pipe(imagemin())
-		.pipe(gulp.dest('./dist/images'));
+		.pipe(gulp.dest('./dist/images/heroes'));
