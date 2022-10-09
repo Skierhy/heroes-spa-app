@@ -1,5 +1,8 @@
 body {
 	background-color: #121212;
+	position: relative;
+	padding-bottom: 5.5rem;
+	min-height: 100vh;
 }
 
 h1,
