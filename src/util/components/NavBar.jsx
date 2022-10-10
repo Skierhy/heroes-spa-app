@@ -1,13 +1,18 @@
+import { useContext } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../context/auth/AuthContext';
 
 export const NavBar = (props) => {
 	// es un custom hook que nos permite navegar entre rutas
 	const navigate = useNavigate();
+	const { authState, logout } = useContext(AuthContext);
+	const { user } = authState;
 	const onLogout = () => {
 		// ruta que queremos navegar
 		// el segundo argumento es un objeto con opciones
 		// replace: true -> reemplaza la ruta actual por la nueva
 		// evita que el usuario pueda volver a la ruta anterior
+		logout();
 		navigate('/login', { replace: true });
 	};
 	return (
@@ -63,7 +68,8 @@ export const NavBar = (props) => {
 							Search
 						</NavLink>
 						<span className='nav-item nav-link text-info'>
-							Skierhy
+							{/* que no de error */}
+							{user?.name}
 						</span>
 						<button
 							className='nav-item nav-link btn'
