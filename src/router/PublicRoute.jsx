@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 export const PublicRoute = ({ children }) => {
 	const { authState } = useContext(AuthContext);
 	const { logged } = authState;
-	const shows = !logged ? children : <Navigate to={'/login'} />;
+	const shows = !logged ? children : <Navigate to={'/'} />;
 	return shows;
 };
 
@@ -17,5 +17,5 @@ PublicRoute.defaultProps = {
 
 // propsTypes
 PublicRoute.propsTypes = {
-	children: PropTypes.any,
+	children: PropTypes.node,
 };
