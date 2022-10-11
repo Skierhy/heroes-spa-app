@@ -5,7 +5,9 @@ import PropTypes from 'prop-types';
 
 export const PublicRoute = ({ children }) => {
 	const { authState } = useContext(AuthContext);
+	console.log(authState);
 	const { logged } = authState;
+	console.log(logged);
 	const shows = !logged ? children : <Navigate to={'/'} />;
 	return shows;
 };
